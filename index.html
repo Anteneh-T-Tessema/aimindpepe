@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meme Protocol ($AIMP) - The Future of MemeFi</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AI Meme Protocol ($AIMP) is the future of MemeFi. Powered by AI, governed by degens, and built for the meme community.">
+    <meta name="keywords" content="AIMP, MemeFi, AI, Meme Coin, Crypto, Pepe, NFT, Degen, Tokenomics, Meme Factory">
+    <meta property="og:title" content="AI Meme Protocol ($AIMP) - The Future of MemeFi">
+    <meta property="og:description" content="AI Meme Protocol ($AIMP) is the future of MemeFi. Powered by AI, governed by degens, and built for the meme community.">
+    <meta property="og:image" content="/logo.jpeg">
+    <meta property="og:url" content="https://pink.meme">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Meme Protocol ($AIMP) - The Future of MemeFi">
+    <meta name="twitter:description" content="AI Meme Protocol ($AIMP) is the future of MemeFi. Powered by AI, governed by degens, and built for the meme community.">
+    <meta name="twitter:image" content="/logo.jpeg">
+    <!-- Favicon for browser tab branding -->
+    <link rel="icon" type="image/jpeg" href="/logo.jpeg">
+    <link rel="icon" type="image/webp" href="/logo.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(120deg, #0f172a 0%, #059669 40%, #10b981 60%, #34d399 100%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        .ai-glow {
+            box-shadow: 0 0 40px 10px #10b981, 0 0 80px 20px #34d399;
+            border-radius: 50%;
+            animation: aiGlow 3s ease-in-out infinite alternate;
+        }
+        @keyframes aiGlow {
+            0% { box-shadow: 0 0 40px 10px #10b981, 0 0 80px 20px #34d399; }
+            100% { box-shadow: 0 0 80px 30px #059669, 0 0 120px 40px #6ee7b7; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #059669, #10b981, #34d399, #6ee7b7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 2.5s ease-in-out infinite;
+        }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .pulse-border {
+            border: 2px solid #10b981;
+            animation: pulseBorder 1.5s infinite;
+        }
+        @keyframes pulseBorder {
+            0%, 100% { border-color: #10b981; box-shadow: 0 0 8px #10b981; }
+            50% { border-color: #34d399; box-shadow: 0 0 24px #34d399; }
+        }
+        .ai-feature {
+            background: linear-gradient(120deg, #059669 0%, #34d399 100%);
+            color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(52, 211, 153, 0.18);
+            padding: 32px 24px;
+            margin: 16px 0;
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        .ai-feature:hover {
+            transform: scale(1.04) translateY(-4px);
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.25);
+        }
+        .ai-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 8px #34d399);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #10b981;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #10b981;
+            transform: translateY(-2px);
+        }
+        .meme-badge {
+            background: linear-gradient(45deg, #f59e0b, #f97316);
+            color: white;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 8px #f59e0b; }
+            50% { box-shadow: 0 0 24px #f97316; }
+        }
+        .modern-cta {
+            background: linear-gradient(90deg, #059669, #10b981);
+            color: #fff;
+            font-weight: bold;
+            padding: 16px 40px;
+            border-radius: 999px;
+            box-shadow: 0 4px 24px #05966944;
+            font-size: 1.25rem;
+            letter-spacing: 0.05em;
+            transition: box-shadow 0.3s, transform 0.3s;
+            animation: pulseBorder 1.5s infinite;
+        }
+        .modern-cta:hover {
+            box-shadow: 0 8px 32px #10b98188;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .ai-feature { padding: 20px 10px; }
+            .container, .main { padding: 0 8px; }
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #059669 0%, #10b981 25%, #34d399 75%, #6ee7b7 100%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        
+        .pepe-gradient {
+            background: linear-gradient(135deg, #059669, #10b981, #34d399);
+            background-size: 300% 300%;
+            animation: pepeShift 8s ease-in-out infinite;
+        }
+        
+        @keyframes pepeShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .meme-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .meme-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #10b981;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #10b981;
+            transform: translateY(-2px);
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
+        }
+        
+        .tab {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+        }
+        
+        .tab:hover:not(.active) {
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .roadmap-item .dot {
+            transition: all 0.4s ease;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .roadmap-item.active .dot {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            transform: scale(1.8);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+        }
+        
+        .roadmap-item.completed .dot {
+            background: linear-gradient(135deg, #34d399, #6ee7b7);
+            transform: scale(1.3);
+        }
+        
+        .roadmap-item.pending .dot {
+            background: #d1d5db;
+        }
+        
+        .roadmap-item:hover .dot {
+            transform: scale(1.4);
+        }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            height: 350px;
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .price-ticker {
+            background: rgba(0, 0, 0, 0.8);
+            color: #10b981;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            animation: tickerScroll 30s linear infinite;
+        }
+        
+        @keyframes tickerScroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .meme-badge {
+            background: linear-gradient(45deg, #f59e0b, #f97316);
+            color: white;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+        
+        .stats-counter {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #059669;
+            font-size: 2rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #059669, #10b981, #34d399);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .pulse-border {
+            border: 2px solid #10b981;
+            animation: pulseBorder 2s infinite;
+        }
+        
+        @keyframes pulseBorder {
+            0%, 100% { border-color: #10b981; box-shadow: 0 0 5px rgba(16, 185, 129, 0.5); }
+            50% { border-color: #34d399; box-shadow: 0 0 20px rgba(52, 211, 153, 0.8); }
+        }
+        
+        .meme-grid-item {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .meme-grid-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only bg-green-700 text-white px-4 py-2 rounded">Skip to main content</a>
+    <!-- Hidden logo image for SEO/crawler discoverability -->
+    <img src="/logo.jpeg" alt="AIMP Logo" style="display:none;" />
+
+    <!-- Floating Price Ticker -->
+    <div class="fixed top-0 left-0 w-full z-40 price-ticker py-1 text-sm overflow-hidden">
+        <div class="whitespace-nowrap">
+            $AIMP: $0.00420 🚀 +1337% (24h) | Market Cap: $42M | Holders: 69,420 | Volume: $13.37M | To the Moon! 🌙
+        </div>
+    </div>
+
+    <header class="w-full">
+        <nav class="bg-black/20 backdrop-blur-md sticky top-6 z-50 shadow-xl mt-6" role="navigation" aria-label="Main Navigation">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl">🐸</div>
+                    <h1 class="text-2xl font-bold gradient-text">$AIMP</h1>
+                    <span class="meme-badge">BASED</span>
+                </div>
+                <div class="hidden md:flex space-x-8 relative group">
+                    <a class="nav-link" data-scroll-to="vision">Vision</a>
+                    <a class="nav-link" data-scroll-to="memenomic">Memenomic</a>
+                    <a class="nav-link" data-scroll-to="features">AI Tools</a>
+                    <a class="nav-link" data-scroll-to="tokenomics">Tokenomics</a>
+                    <a class="nav-link" data-scroll-to="roadmap">Roadmap</a>
+                    <a class="nav-link" data-scroll-to="community">Community</a>
+                    <a class="nav-link" id="contract-link" href="https://etherscan.io/address/0xAIMPContractAddress" target="_blank" aria-label="View Smart Contract on Etherscan">Smart Contract</a>
+                    <a class="nav-link" id="audit-link" href="https://pink.meme/audit.pdf" target="_blank" aria-label="View Audit Report PDF">Audit Report</a>
+                    <a class="nav-link" id="whitepaper-link" href="whitepaper.html" target="_blank">Whitepaper</a>
+                    <div class="absolute top-full left-0 w-max bg-black/80 text-white rounded-lg shadow-lg p-4 mt-2 hidden z-50" id="nav-dropdown">
+                        <div class="mb-2"><strong>Vision:</strong> Building the future where memes have utility and AI serves the degen community.</div>
+                        <div class="mb-2"><strong>Memenomic:</strong> Inspired by legendary meme coins, but with actual utility and AI-powered features.</div>
+                        <div class="mb-2"><strong>AI Tools:</strong> A full arsenal of meme generation, avatars, LLM access, smart NFTs, and MemeFi tools.</div>
+                        <div class="mb-2"><strong>Tokenomics:</strong> 1 Billion $AIMP tokens, no taxes, pure degen economics, deflationary mechanics.</div>
+                        <div class="mb-2"><strong>Roadmap:</strong> Transparent milestones, community-driven development, and continuous innovation.<span class="ml-2 text-yellow-400">— Coming Soon!</span></div>
+                        <div><strong>Community:</strong> Join Twitter/X, Telegram, Discord, and TikTok for the latest updates and meme culture.<span class="ml-2 text-yellow-400">— Coming Soon!</span></div>
+                    </div>
+                </div>
+                <a href="#" class="hidden md:block bg-gradient-to-r from-emerald-500 to-green-400 text-white font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all pulse-border">
+                    🚀 HODL NOW
+                </a>
+            </div>
+        <script>
+        // Enhanced navigation: scroll to section or show 404.html if missing
+        // Accessibility and dynamic stats
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('.nav-link');
+            var navDropdown = document.getElementById('nav-dropdown');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    // Hide dropdown when any link is clicked
+                    if (navDropdown) navDropdown.style.display = 'none';
+                    // If whitepaper link, only show it as active and hide others
+                    if (link.id === 'whitepaper-link') {
+                        e.preventDefault();
+                        navLinks.forEach(function(l) {
+                            if (l !== link) l.style.display = 'none';
+                            else l.classList.add('active');
+                        });
+                        window.open('whitepaper.html', '_blank');
+                    } else {
+                        navLinks.forEach(function(l) {
+                            l.classList.remove('active');
+                        });
+                        link.classList.add('active');
+                        var sectionId = link.getAttribute('data-scroll-to');
+                        var section = document.getElementById(sectionId);
+                        if (section) {
+                            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                            window.location.href = '404.html';
+                        }
+                    }
+                });
+            });
+
+            // Animate live stats
+            function animateValue(obj, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    obj.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString();
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+            animateValue(document.getElementById('holders-count'), 0, 69420, 2000);
+            animateValue(document.getElementById('memes-generated'), 0, 1337420, 2000);
+            animateValue(document.querySelector('.stats-counter.text-yellow-400'), 0, 42000000, 2000);
+            animateValue(document.querySelector('.stats-counter.text-purple-400'), 0, 1337, 2000);
+
+            // Simulate trading feed
+            const tradingFeed = document.getElementById('trading-feed');
+            const actions = ['Bought', 'Sold', 'Minted', 'Burned'];
+            const tokens = ['$AIMP', 'NFT', 'Meme'];
+            function randomFeedItem() {
+                const action = actions[Math.floor(Math.random() * actions.length)];
+                const token = tokens[Math.floor(Math.random() * tokens.length)];
+                const amount = Math.floor(Math.random() * 1000) + 1;
+                const user = '0x' + Math.random().toString(16).substr(2, 6);
+                return `<div><span class="font-bold text-green-400">${user}</span> ${action} <span class="font-bold">${amount} ${token}</span></div>`;
+            }
+            setInterval(() => {
+                if (tradingFeed) {
+                    tradingFeed.insertAdjacentHTML('afterbegin', randomFeedItem());
+                    if (tradingFeed.children.length > 20) {
+                        tradingFeed.removeChild(tradingFeed.lastChild);
+                    }
+                }
+            }, 2500);
+        });
+        </script>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container mx-auto px-6 py-12" aria-label="Main Content">
+
+        <section id="hero" class="text-center mb-32 relative">
+            <!-- AIMP Pepe Hero Image + Logo -->
+            <div class="floating-element mb-12 relative">
+                <div class="w-64 h-64 mx-auto mb-6 bg-gradient-to-r from-purple-900 via-blue-900 to-green-900 rounded-full flex items-center justify-center relative overflow-hidden ai-glow">
+                    <!-- Optimized Logo Image: WebP with JPEG fallback, lazy loading -->
+                    <picture>
+                        <!-- If logo.jpeg is at the root, use /logo.jpeg for direct access -->
+                        <source srcset="/logo.webp" type="image/webp">
+                        <img src="/logo.jpeg" alt="AI Meme Protocol Logo - AIMP Pepe" class="absolute inset-0 w-full h-full object-cover rounded-full opacity-80" style="z-index:1;" loading="lazy" />
+                    </picture>
+                    <!-- Simulated AIMP Pepe Character -->
+                    <div class="text-8xl relative z-10">🐸</div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-green-400/20 animate-pulse"></div>
+                    <!-- Chart background effect -->
+                    <div class="absolute bottom-4 right-4 text-green-400 text-sm font-mono">📊 +1337%</div>
+                    <!-- Bitcoin symbol -->
+                    <div class="absolute top-4 right-4 text-orange-400 text-2xl">₿</div>
+                </div>
+                <!-- AIMindPEPE branding -->
+                <div class="text-2xl font-black text-white mb-2 tracking-wider">AIMindPEPE</div>
+            </div>
+            <h2 class="text-6xl md:text-8xl font-black mb-6">
+                <span class="gradient-text">AIMP</span>
+            </h2>
+            <p class="text-2xl md:text-3xl text-green-100 max-w-4xl mx-auto mb-4 font-light">
+                Where <span class="font-bold">ARTIFICIAL INTELLIGENCE</span> meets <span class="font-bold">DEGEN CULTURE</span>
+            </p>
+            <p class="text-lg text-green-200 max-w-2xl mx-auto mb-12">
+                The first memecoin that actually does something. Powered by AI, driven by memes, governed by degens.
+            </p>
+            
+            <!-- Live AIMP Pepe Showcase -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto">
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+                    <div class="text-4xl mb-2">🐸</div>
+                    <div class="stats-counter text-emerald-400" id="holders-count">69,420</div>
+                    <div class="text-green-200 text-sm">PEPE HOLDERS</div>
+                    <!-- Chart effect -->
+                    <div class="absolute -bottom-2 -right-2 text-6xl opacity-20">📈</div>
+                </div>
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+                    <div class="text-4xl mb-2">🤖</div>
+                    <div class="stats-counter text-blue-400" id="memes-generated">1,337,420</div>
+                    <div class="text-green-200 text-sm">AI MEMES CREATED</div>
+                    <div class="absolute -bottom-2 -right-2 text-6xl opacity-20">🎨</div>
+                </div>
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+                    <div class="text-4xl mb-2">💎</div>
+                    <div class="stats-counter text-yellow-400">$42M</div>
+                    <div class="text-green-200 text-sm">MARKET CAP</div>
+                    <div class="absolute -bottom-2 -right-2 text-6xl opacity-20">🚀</div>
+                </div>
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+                    <div class="text-4xl mb-2">📱</div>
+                    <div class="stats-counter text-purple-400">1337%</div>
+                    <div class="text-green-200 text-sm">24H BASED PUMP</div>
+                    <div class="absolute -bottom-2 -right-2 text-6xl opacity-20">⚡</div>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="https://twitter.com/aimindpepe" class="bg-black text-white font-bold py-4 px-8 rounded-full hover:bg-gray-800 transition-all meme-hover" target="_blank" rel="noopener" aria-label="Follow us on Twitter/X">🦅 Twitter/X</a>
+                <a href="https://t.me/aimindpepe" class="bg-blue-500 text-white font-bold py-4 px-8 rounded-full hover:bg-blue-600 transition-all meme-hover" target="_blank" rel="noopener" aria-label="Join our Telegram">📱 Telegram</a>
+                <a href="https://discord.gg/aimindpepe" class="bg-purple-600 text-white font-bold py-4 px-8 rounded-full hover:bg-purple-700 transition-all meme-hover" target="_blank" rel="noopener" aria-label="Join our Discord">👾 Discord</a>
+                <a href="https://tiktok.com/@aimindpepe" class="bg-red-500 text-white font-bold py-4 px-8 rounded-full hover:bg-red-600 transition-all meme-hover" target="_blank" rel="noopener" aria-label="Follow us on TikTok">🎬 TikTok</a>
+            </div>
+        </section>
+
+        <!-- AIMP Pepe Trading Widget -->
+        <section id="trading-widget" class="mb-32">
+            <div class="glass-card p-8 rounded-xl max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-black gradient-text mb-4">🐸 LIVE AIMP TRADING 🚀</h3>
+                    <p class="text-green-100">Real-time AIMindPEPE price action and meme generation stats</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Price Chart Simulation -->
+                    <div class="md:col-span-2 bg-black/30 rounded-lg p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <div class="text-2xl font-bold text-emerald-400">$AIMP/USDT</div>
+                                <div class="text-sm text-green-300">AIMindPEPE</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-mono text-white" id="live-price">$0.004200</div>
+                                <div class="text-sm font-bold text-green-400" id="price-change">+1337.69% (24h)</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Simulated Chart Bars -->
+                        <div class="flex items-end space-x-1 h-32 mb-4">
+                            <div class="bg-emerald-400 w-3 h-16 rounded-t"></div>
+                            <div class="bg-emerald-500 w-3 h-20 rounded-t"></div>
+                            <div class="bg-green-400 w-3 h-24 rounded-t"></div>
+                            <div class="bg-emerald-400 w-3 h-28 rounded-t"></div>
+                            <div class="bg-green-500 w-3 h-32 rounded-t animate-pulse"></div>
+                            <div class="bg-emerald-300 w-3 h-30 rounded-t"></div>
+                            <div class="bg-green-400 w-3 h-26 rounded-t"></div>
+                            <div class="bg-emerald-500 w-3 h-22 rounded-t"></div>
+                        </div>
+                        
+                        <!-- Trading Buttons -->
+                        <div class="flex gap-3">
+                            <button onclick="window.socialManager && socialManager.simulateTrade('buy')" class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                                🚀 BUY AIMP
+                            </button>
+                            <button onclick="window.socialManager && socialManager.simulateTrade('sell')" class="flex-1 bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                                📉 SELL AIMP
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Live Activity Feed -->
+                    <div class="bg-black/30 rounded-lg p-4">
+                        <h4 class="font-bold mb-4 text-center">🔴 LIVE ACTIVITY</h4>
+                        <div id="trading-feed" class="space-y-3 text-xs max-h-64 overflow-y-auto">
+                            <!-- Dynamic content will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="memenomic" class="mb-32 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-5xl font-black mb-4 gradient-text">THE MEMENOMIC REVOLUTION</h3>
+                <p class="text-xl text-green-100 max-w-4xl mx-auto">
+                    Inspired by legends like <span class="font-bold text-yellow-300">$DOGE</span>, <span class="font-bold text-green-300">$PEPE</span>, and <span class="font-bold text-blue-300">$SHIB</span> - but with actual utility that makes your brain wrinkle.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="glass-card p-8 rounded-xl meme-hover text-center">
+                    <div class="text-6xl mb-4">🚀</div>
+                    <h4 class="text-2xl font-bold mb-4">DOGE ENERGY</h4>
+                    <p class="text-green-100">Community-driven, meme-powered, and destined for the moon. But this time with AI superpowers.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl meme-hover text-center">
+                    <div class="text-6xl mb-4">🐸</div>
+                    <h4 class="text-2xl font-bold mb-4">PEPE VIBES</h4>
+                    <p class="text-green-100">The rarest Pepes are now AI-generated. Mint, trade, and flex your digital rare collectibles.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl meme-hover text-center">
+                    <div class="text-6xl mb-4">🤖</div>
+                    <h4 class="text-2xl font-bold mb-4">AI INNOVATION</h4>
+                    <p class="text-green-100">Actually useful technology that generates value, not just hype. Revolutionary MemeFi ecosystem.</p>
+                </div>
+            </div>
+            
+            <!-- AIMP vs Competition with Pepe Focus -->
+            <div class="glass-card p-8 rounded-xl">
+                <h4 class="text-3xl font-bold text-center mb-8">🐸 AIMP VS THE FROGS 🐸</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-center">
+                        <thead>
+                            <tr class="border-b border-green-300">
+                                <th class="py-4 px-2">🏆 Feature</th>
+                                <th class="py-4 px-2">🐕 $DOGE</th>
+                                <th class="py-4 px-2">🐸 $PEPE</th>
+                                <th class="py-4 px-2">🐕 $SHIB</th>
+                                <th class="py-4 px-2 text-emerald-300">🤖 $AIMP</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-green-100">
+                            <tr class="border-b border-green-400/30">
+                                <td class="py-3 font-semibold">Meme Power</td>
+                                <td>🐕 OG Legend</td>
+                                <td>🐸 Rare Pepe</td>
+                                <td>🐕 Shiba Army</td>
+                                <td class="text-emerald-300">🤖 AI-Enhanced Pepe</td>
+                            </tr>
+                            <tr class="border-b border-green-400/30">
+                                <td class="py-3 font-semibold">AI Integration</td>
+                                <td>❌ None</td>
+                                <td>❌ None</td>
+                                <td>❌ None</td>
+                                <td class="text-emerald-300">✅ Native AI Engine</td>
+                            </tr>
+                            <tr class="border-b border-green-400/30">
+                                <td class="py-3 font-semibold">NFT Ecosystem</td>
+                                <td>⭐ Basic</td>
+                                <td>⭐⭐ Growing</td>
+                                <td>⭐⭐⭐ Strong</td>
+                                <td class="text-emerald-300">⭐⭐⭐⭐⭐ Smart NFTs</td>
+                            </tr>
+                            <tr class="border-b border-green-400/30">
+                                <td class="py-3 font-semibold">Utility Score</td>
+                                <td>2/10</td>
+                                <td>1/10</td>
+                                <td>6/10</td>
+                                <td class="text-emerald-300">10/10 🚀</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold">Based Level</td>
+                                <td>🌙 Moon Mission</td>
+                                <td>🐸 Rare Status</td>
+                                <td>🔥 Community</td>
+                                <td class="text-emerald-300">🚀 Next Dimension</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pepe Tribute Section -->
+                <div class="mt-8 p-6 bg-emerald-500/10 rounded-xl border border-emerald-500/30">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🐸</div>
+                        <h5 class="text-2xl font-bold text-emerald-300 mb-3">BUILT ON PEPE ENERGY</h5>
+                        <p class="text-green-100 max-w-2xl mx-auto">
+                            AIMP honors the legendary Pepe meme while adding cutting-edge AI capabilities. 
+                            We're not just another frog token - we're the evolution of internet culture powered by artificial intelligence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="mb-32 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-5xl font-black mb-4 gradient-text">THE VISION</h3>
+                <p class="text-xl text-green-100 max-w-4xl mx-auto">
+                    We're not just another dog coin. We're building the future where memes have utility and AI serves the degen community.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="glass-card p-10 rounded-xl meme-hover">
+                    <div class="text-6xl mb-6">🧠</div>
+                    <h4 class="text-2xl font-bold mb-4">AI-POWERED CREATIVITY</h4>
+                    <p class="text-green-100 leading-relaxed">Generate the spiciest memes, rarest NFTs, and most viral content with our AI arsenal. Every $AIMP holder becomes a meme lord.</p>
+                </div>
+                <div class="glass-card p-10 rounded-xl meme-hover">
+                    <div class="text-6xl mb-6">💎</div>
+                    <h4 class="text-2xl font-bold mb-4">DIAMOND HANDS REWARDS</h4>
+                    <p class="text-green-100 leading-relaxed">Stake your memes, farm $AIMP tokens, and get rewarded for your creativity. The longer you hold, the rarer your content becomes.</p>
+                </div>
+                <div class="glass-card p-10 rounded-xl meme-hover">
+                    <div class="text-6xl mb-6">🏛️</div>
+                    <h4 class="text-2xl font-bold mb-4">DEGEN GOVERNANCE</h4>
+                    <p class="text-green-100 leading-relaxed">The community decides everything through the AIMP DAO. Propose features, vote on partnerships, and shape the meme economy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-32 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-5xl font-black mb-4 gradient-text">AI MEME ARSENAL</h3>
+                <p class="text-xl text-green-100 max-w-4xl mx-auto">
+                    Every tool in our ecosystem is designed to make you the ultimate meme machine. Powered by $AIMP tokens.
+                </p>
+            </div>
+            <div class="glass-card rounded-xl p-6 max-w-6xl mx-auto">
+                <div class="flex flex-wrap justify-center border-b border-green-300/30 mb-8">
+                    <button class="tab active py-3 px-6 m-1 font-bold" data-tab="generator">🎨 MEME FACTORY <span class="ml-2 px-2 py-1 rounded bg-green-600 text-xs">[Live]</span></button>
+                    <button class="tab py-3 px-6 m-1 font-bold" data-tab="avatars">🎭 AI AVATARS <span class="ml-2 px-2 py-1 rounded bg-yellow-500 text-xs">[Beta]</span></button>
+                    <button class="tab py-3 px-6 m-1 font-bold" data-tab="llm">🤖 LLM ACCESS <span class="ml-2 px-2 py-1 rounded bg-yellow-500 text-xs">[Beta]</span></button>
+                    <button class="tab py-3 px-6 m-1 font-bold" data-tab="nfts">💎 SMART NFTS <span class="ml-2 px-2 py-1 rounded bg-gray-500 text-xs">[Coming Soon]</span></button>
+                    <button class="tab py-3 px-6 m-1 font-bold" data-tab="defi">🚀 MEMEFI <span class="ml-2 px-2 py-1 rounded bg-gray-500 text-xs">[Coming Soon]</span></button>
+                </div>
+                <div id="tab-content" class="p-8 min-h-[300px]">
+                </div>
+            </div>
+        </section>
+
+        <section id="tokenomics" class="mb-32 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-5xl font-black mb-4 gradient-text">TOKENOMICS</h3>
+                <p class="text-xl text-green-100 max-w-4xl mx-auto">
+                    1 Billion $AIMP tokens. No taxes. No bullshit. Just pure degen economics designed for maximum meme velocity.
+                </p>
+            </div>
+            <div class="glass-card rounded-xl p-8 max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="chart-container">
+                        <canvas id="tokenomicsChart"></canvas>
+                        <div id="chart-center-text" class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+                            <span class="text-4xl font-black text-white">1B</span>
+                            <span class="text-green-200 text-sm">TOTAL SUPPLY</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold mb-8">DISTRIBUTION BREAKDOWN</h4>
+                        <ul id="tokenomics-legend" class="space-y-4">
+                        </ul>
+                        <div class="mt-8 p-6 bg-black/30 rounded-xl">
+                            <h5 class="text-xl font-bold mb-3 text-yellow-300">🔥 BURN MECHANICS</h5>
+                            <p class="text-green-100 text-sm">Every AI generation burns 0.01% of transaction fees. Every NFT mint burns 1% of minting cost. Deflation meets innovation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="mb-32 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-5xl font-black mb-4 gradient-text">ROADMAP</h3>
+                <p class="text-xl text-green-100 max-w-4xl mx-auto">
+                    Transparent milestones, community-driven development, and continuous innovation. Join us on this epic journey.
+                </p>
+            </div>
+            <div class="space-y-8">
+                <!-- Roadmap Item Example -->
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mr-4">
+                            <div class="text-3xl text-green-500">🚀</div>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-1">Phase 1: Launch & Meme Blitz</h4>
+                            <p class="text-green-100 text-sm">Deploy $AIMP, initial DEX listing, and viral meme campaigns.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mr-4">
+                            <div class="text-3xl text-green-500">📈</div>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-1">Phase 2: AI Tooling & Partnerships</h4>
+                            <p class="text-green-100 text-sm">Launch AI meme generator, forge strategic partnerships, and expand community.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more roadmap items as needed -->
+            </div>
+        </section>
+
+        <section id="community" class="mb-32 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-5xl font-black mb-4 gradient-text">JOIN THE COMMUNITY</h3>
+                <p class="text-xl text-green-100 max-w-4xl mx-auto">
+                    Be part of the revolution. Engage, collaborate, and create memes that matter.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-xl text-center">
+                    <div class="text-6xl mb-4">🦸‍♂️</div>
+                    <h4 class="text-2xl font-bold mb-4">Telegram</h4>
+                    <p class="text-green-100">Join our Telegram group for real-time updates, discussions, and meme sharing.</p>
+                    <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                        Join Now
+                    </a>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center">
+                    <div class="text-6xl mb-4">👾</div>
+                    <h4 class="text-2xl font-bold mb-4">Discord</h4>
+                    <p class="text-green-100">Connect with fellow degens, participate in events, and access exclusive content.</p>
+                    <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                        Join Now
+                    </a>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center">
+                    <div class="text-6xl mb-4">🎬</div>
+                    <h4 class="text-2xl font-bold mb-4">TikTok</h4>
+                    <p class="text-green-100">Follow us on TikTok for the latest memes, updates, and community highlights.</p>
+                    <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                        Follow Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Injection Point for AI Tools and Features -->
+        <div id="dynamic-content" class="mb-32">
+        </div>
+    </main>
+
+    <footer class="bg-black/80 text-green-100 py-8 mt-16" aria-label="Footer">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">&copy; 2025 AI Meme Protocol ($AIMP). All rights reserved.</div>
+            <div class="flex space-x-4 mb-4 md:mb-0">
+                <a href="https://twitter.com/aimindpepe" class="hover:text-green-400" aria-label="Twitter/X">Twitter/X</a>
+                <a href="https://t.me/aimindpepe" class="hover:text-green-400" aria-label="Telegram">Telegram</a>
+                <a href="https://discord.gg/aimindpepe" class="hover:text-green-400" aria-label="Discord">Discord</a>
+                <a href="https://tiktok.com/@aimindpepe" class="hover:text-green-400" aria-label="TikTok">TikTok</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="privacy.html" class="hover:text-green-400" aria-label="Privacy Policy">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-green-400" aria-label="Terms of Service">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SEO: robots.txt and sitemap.xml recommendations -->
+    <!--
+    To further improve SEO, add these files to your public directory:
+    robots.txt:
+    User-agent: *
+    Allow: /
+    Sitemap: https://pink.meme/sitemap.xml
+
+    sitemap.xml:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://pink.meme/</loc>
+        <priority>1.0</priority>
+      </url>
+      <url>
+        <loc>https://pink.meme/whitepaper.html</loc>
+        <priority>0.8</priority>
+      </url>
+      <!-- Add more URLs as needed -->
+    </urlset>
+    -->
+
+    <!-- JavaScript for dynamic content and interactions -->
+    <script>
+    // Tabbed content for AI tools and features
+    document.addEventListener('DOMContentLoaded', function() {
+        var tabs = document.querySelectorAll('.tab');
+        var tabContent = document.getElementById('tab-content');
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var target = tab.getAttribute('data-tab');
+                // Activate the clicked tab
+                tabs.forEach(function(t) { t.classList.remove('active'); });
+                tab.classList.add('active');
+                // Load the corresponding content
+                loadTabContent(target);
+            });
+        });
+        // Load default tab content
+        function loadTabContent(tabName) {
+            var content = '';
+            switch(tabName) {
+                case 'generator':
+                    content = `
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold mb-4">🎨 Meme Factory</h2>
+                            <p class="text-green-100 mb-8">Unleash your creativity with our AI-powered meme generator. Create, share, and dominate the meme game.</p>
+                            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                                Access Meme Factory
+                            </a>
+                        </div>
+                    `;
+                    break;
+                case 'avatars':
+                    content = `
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold mb-4">🎭 AI Avatars</h2>
+                            <p class="text-green-100 mb-8">Get your unique AI-generated avatar. Stand out in the community with a one-of-a-kind digital persona.</p>
+                            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                                Generate Your Avatar
+                            </a>
+                        </div>
+                    `;
+                    break;
+                case 'llm':
+                    content = `
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold mb-4">🤖 LLM Access</h2>
+                            <p class="text-green-100 mb-8">Leverage the power of large language models for your meme captions, stories, and more. Let AI do the talking.</p>
+                            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                                Access LLM Tools
+                            </a>
+                        </div>
+                    `;
+                    break;
+                case 'nfts':
+                    content = `
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold mb-4">💎 Smart NFTs</h2>
+                            <p class="text-green-100 mb-8">Discover the future of NFTs with our smart, AI-enhanced collectibles. More than just art - it's a revolution.</p>
+                            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                                Explore Smart NFTs
+                            </a>
+                        </div>
+                    `;
+                    break;
+                case 'defi':
+                    content = `
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold mb-4">🚀 MemeFi</h2>
+                            <p class="text-green-100 mb-8">Dive into the world of MemeFi - where memes meet decentralized finance. Earn, trade, and meme your way to the moon.</p>
+                            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+                                Join the MemeFi Revolution
+                            </a>
+                        </div>
+                    `;
+                    break;
+                default:
+                    content = '<div class="text-center text-red-500">Error: Content not found.</div>';
+            }
+            tabContent.innerHTML = content;
+        }
+        // Initial load
+        loadTabContent('generator');
+    });
+    </script>
+</body>
+</html>
