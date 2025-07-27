@@ -207,6 +207,17 @@ export default function Home() {
           </blockquote>
         </div>
       </section>
+      {/* Team Section */}
+      <section id="team" className="glass-card p-8 rounded-2xl shadow-lg max-w-3xl w-full mb-12 mx-auto">
+        <h2 className="text-2xl font-bold mb-4 gradient-text">Meet the Team</h2>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <Image src="/team.svg" alt="Project Team" width={48} height={48} />
+            <span className="font-semibold text-lg">AI Engineers, Cryptocurrency & Blockchain Experts</span>
+          </div>
+          <p className="mt-2">Our dedicated team is working to bring together the best of AI and blockchain. We are actively developing Bitcoin L2 projects and pioneering Quantum Secured Crypto AI solutions for the future of secure, scalable, and intelligent finance.</p>
+        </div>
+      </section>
       {/* Trust Signals Section */}
       <section id="trust" className="flex flex-wrap gap-8 justify-center items-center mb-12">
         <div className="flex flex-col items-center">
